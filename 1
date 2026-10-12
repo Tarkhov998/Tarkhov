@@ -1,0 +1,69 @@
+#include <iostream> 
+#include <iomanip> 
+#include <cmath> 
+using namespace std; 
+
+  
+
+int main() 
+
+{ 
+
+    // ---------- тип float ---------- 
+    float af = 100, bf = 0.001f; 
+    float c1 = pow(af + bf, 4.0f);     // (a+b)^4 
+    float c2 = pow(af, 4.0f);          // a^4 
+    float c3 = 4 * pow(af, 3.0f) * bf; // 4*a^3*b 
+    float c4 = 6 * af * af * bf * bf;  // 6*a^2*b^2 
+    float c5 = 4 * af * pow(bf, 3.0f); // 4*a*b^3 
+    float c6 = pow(bf, 4.0f);          // b^4 
+    float chislf = c1 - (c2 + c3);     // числитель 
+    float znamf  = c4 + c5 + c6;       // знаменатель 
+    float resf   = chislf / znamf; 
+
+  
+
+    cout << setprecision(10); 
+    cout << "Тип float" << endl; 
+    cout << "(a+b)^4     = " << c1 << endl; 
+    cout << "a^4         = " << c2 << endl; 
+    cout << "4*a^3*b     = " << c3 << endl; 
+    cout << "6*a^2*b^2   = " << c4 << endl; 
+    cout << "4*a*b^3     = " << c5 << endl; 
+    cout << "b^4         = " << c6 << endl; 
+    cout << "Числитель   = " << chislf << endl; 
+    cout << "Знаменатель = " << znamf << endl; 
+    cout << "Результат   = " << resf << endl << endl; 
+
+  
+
+    // ---------- тип double ---------- 
+
+    double ad = 100, bd = 0.001; 
+    double d1 = pow(ad + bd, 4); 
+    double d2 = pow(ad, 4); 
+    double d3 = 4 * pow(ad, 3) * bd; 
+    double d4 = 6 * ad * ad * bd * bd; 
+    double d5 = 4 * ad * pow(bd, 3); 
+    double d6 = pow(bd, 4); 
+    double chislD = d1 - (d2 + d3); 
+    double znamD  = d4 + d5 + d6; 
+    double resD   = chislD / znamD; 
+
+  
+
+    cout << setprecision(16); 
+    cout << "Тип double" << endl; 
+    cout << "(a+b)^4     = " << d1 << endl; 
+    cout << "a^4         = " << d2 << endl; 
+    cout << "4*a^3*b     = " << d3 << endl; 
+    cout << "6*a^2*b^2   = " << d4 << endl; 
+    cout << "4*a*b^3     = " << d5 << endl; 
+    cout << "b^4         = " << d6 << endl; 
+    cout << "Числитель   = " << chislD << endl; 
+    cout << "Знаменатель = " << znamD << endl; 
+    cout << "Результат   = " << resD << endl; 
+
+    return 0; 
+
+}

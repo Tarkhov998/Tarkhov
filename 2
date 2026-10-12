@@ -1,0 +1,29 @@
+#include <iostream> 
+
+using namespace std; 
+
+int main() 
+
+{ 
+    int m, n, r; 
+
+    m = 2; n = 3; 
+    r = m - ++n; 
+    cout << "1) m-++n   : r = " << r; 
+    cout << ", m = " << m << ", n = " << n << endl; 
+  
+
+    m = 2; n = 3; 
+    r = ++m > --n; 
+    cout << "2) ++m>--n : r = " << r; 
+    cout << ", m = " << m << ", n = " << n << endl; 
+  
+
+    m = 2; n = 3; 
+    r = --n < ++m; 
+    cout << "3) --n<++m : r = " << r; 
+    cout << ", m = " << m << ", n = " << n << endl; 
+    return 0; 
+} 
+
+ 
